@@ -1,0 +1,388 @@
+.hide{display:none}
+.hedcolup{
+background-color: #4994A9;
+
+}
+.hedcoldown{
+background-color: #CE9255;
+}
+ul{
+	 padding: 0;
+}
+li{
+	list-style-type: none; /* Убираем маркеры */
+}
+.obvod {
+	font-size:40px;
+   color: black;
+  -webkit-text-stroke: 1px;
+  -webkit-text-fill-color: transparent;
+}
+.obvod:hover{
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+    color: black;
+}
+.ulseclist{ 
+	margin-left:7em;
+	  padding: 5px; 
+	  font-weight:bold;
+	text-shadow: 1px 1px 2px black;
+    height:60px;
+	 
+   }
+   
+   
+    .swiper {
+        width: 100%;
+        height: 550px;
+		background-color:#000;
+		 background: url("https://yams.kufar.by/api/v1/kufar-ads/images/77/7732991483.jpg?rule=gallery") no-repeat;
+		margin-top:9em;
+		 background-size: cover;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background-color: transparent;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+       object-fit: contain;
+	     background-color: transparent;
+      
+      }
+    .fillsl{
+	 width: 100%;
+        height: 100%;
+	   display: block;
+	  object-fit: contain;
+	    background-color: transparent;
+	 
+}
+.block {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  
+  font-size: 16px;
+ background-size: cover;
+  text-align: center;
+   object-fit: cover;
+}
+
+	  
+	 .strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+	left:-38%;
+}
+
+.strike > span:before{
+content: "";
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background: black;
+	right: 100%;
+    margin-right: 15px;
+	
+}
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 1350px;
+    height: 1px;
+    background: black;
+	 left: 100%;
+    margin-left: 15px;
+}
+
+
+
+.fig {
+    text-align: center; /* Выравнивание по центру saaaaaaaaaaaaaaaaaas*/ 
+	margin: 1em;
+	
+   }
+.menu_font_el{
+	font-size:24px;
+	
+}
+.top_menu{
+	font-size:20px;
+}
+.product p{
+	margin: 24px;
+    
+}
+
+.product p img {
+	width: 40px;
+    height: 40px;
+	margin-left: 160px;
+	border:none;
+}
+.orderproduct{
+	margin: 24px;
+        
+}
+.orderproduct img {
+	width: 160px;
+    height: 160px;
+	border: 2px solid #555;
+	
+}
+.but_inside{
+	
+	font-size:14px;
+}	
+.Zagolovok {
+   margin: 32px; 
+   }
+
+.reg_fig {
+    text-align: right; /* Выравнивание по правому краю */ 
+	margin: 1em;
+	
+   }
+.lich_kab_fig {
+    text-align: left; /* Выравнивание по левому краю */ 
+	margin: 1em;
+	
+   }
+   
+  .buttonChangeColor:hover {
+  color: #121416 !important;
+  
+}
+
+.btn:focus,
+.btn:active {
+  box-shadow: none !important;
+  
+}
+.buttonUnderline:hover{
+text-decoration: underline;	
+color: #121416 !important;
+}
+
+ figure img:hover{
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+.product p button{
+  background-color:transparent;
+}
+input{
+	   background-color: Gainsboro;
+  }
+ .forimg{
+	 position:relative;
+	
+	 margin: 10px;
+ width: 340px;
+ height: 340px;	
+ } 
+.forimg img{
+width: 320px;
+    height: 320px;
+		border: 2px solid #555;
+background-color: rgba(28,28,28,0);
+}
+  .container{
+	  margin-top: 2em;
+	   margin-bottom: 3em;
+	 
+  display: block;
+  align-items: center;
+  justify-content: center;
+ 
+  }
+  .container_auth{
+	  margin-top: 16em;
+	   margin-bottom: 3em;
+	 
+  display: block;
+  align-items: center;
+  justify-content: center;
+ 
+  }
+  .container form{
+	   margin: 0;
+	  box-shadow: 0px 0px 100px Purple;
+	   padding: 10px;
+  }
+  
+  .container form img{
+	 
+	  width:100%;
+    height: 100%;
+	 
+  }
+ 
+ table {
+	 
+	 width:100%;
+	 border-top: 3px double black;
+	 
+ }
+ Tr {
+  
+	 border-bottom: 3px double black;
+	 
+   }
+ 
+ .imgsl{
+	 width: 50%;
+        height: 100%;
+	   display: block;
+	  object-fit: contain;
+ background-color: transparent;}
+ #form{
+  display:none;
+}
+.genreback{
+	background: IndianRed;
+	  border-radius: 5px;
+}
+
+.carrierback{
+	background-color:GreenYellow;
+	  border-radius: 5px;
+}
+.styleback{
+	background-color: grey;
+	  border-radius: 5px;
+	text-align: center;
+}
+.allcatback{
+	background-color:HotPink;
+	  border-radius: 5px;
+}
+.list_drop_item{
+	padding:0px;
+	border: none;
+	background-color: transparent;
+	outline: 0 !important;
+	
+} 
+.list_drop_top{
+	text-shadow: 1px 1px 2px black;
+	border: none;
+	background-color: transparent;
+	outline: 0 !important;
+	
+} 
+.sound_list{
+	width: 400px;
+	margin: 20px;
+	
+}
+.sound_list table{
+	border: none;
+	padding:10px;
+}
+.sound_list tr{
+	border: 2px solid white;
+    background-color: rgba(255,156,34,0.8);
+	
+}
+.timesound{
+	text-align:center;
+	width:80px;
+}
+
+.btn-up {
+  /* фиксированное позиционирование */
+  position: fixed;
+  /* цвет фона */
+  background-color: #673ab7;
+  /* расстояние от правого края окна браузера */
+  right: 10px;
+  /* расстояние от нижнего края окна браузера */
+  bottom: 0;
+  /* скругление верхнего левого угла */
+  border-top-left-radius: 8px;
+  /* скругление верхнего правого угла */
+  border-top-right-radius: 8px;
+  /* вид курсора */
+  cursor: pointer;
+  /* отображение элемента как flex */
+  display: flex;
+  /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+  align-items: center;
+  /* выравниваем элементы внутри элемента по центру вдоль главной оси */
+  justify-content: center;
+  /* ширина элемента */
+  width: 60px;
+  /* высота элемента */
+  height: 50px;
+}
+
+.btn-up::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #512da8; /* цвет заднего фона при наведении */
+  }
+}
+.container_main{
+	  
+	 
+  display: block;
+  align-items: center;
+  justify-content: center;
+padding-right: 105px;
+  padding-left:105px;
+  margin-right: auto;
+  margin-left: auto;
+  }
+  .container_main form{
+	   margin: 0;
+	 
+	   padding: 10px;
+  }
+  
+  
