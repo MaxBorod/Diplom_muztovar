@@ -1,0 +1,15 @@
+﻿User-Agent: *
+Disallow: /admin/
+Disallow: Личный_кабинет.php
+Disallow: /css/
+Disallow: /js/
+Allow:/img
+Disallow:Reg.php
+Disallow:checkSessionBasket.php
+Disallow:Delete.php
+Disallow:Autoriz.php
+Disallow:checkSession.php
+Disallow:exit.php
+Disallow:Order.php
+Disallow:Relogin.php
+
