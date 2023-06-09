@@ -91,7 +91,7 @@
    <div class="container_auth flex-shrink-0" >
         <div class="row justify-content-center">
            
-  <form method="POST" action ="Autoriz.php" style="box-shadow: 0px 0px 5px black; width:320px;border-radius: 15px;">
+  <form method="POST" name="contact_form" action ="Autoriz.php" style="box-shadow: 0px 0px 5px black; width:320px;border-radius: 15px;" onsubmit="return validate_form ( );">
   <div class="reg_fig">
   <h3 class="fig">Авторизация</h3>
   <div class="form-group row">
@@ -120,6 +120,28 @@
   </form>
         </div>
     </div><br>
+	<script type="text/javascript">
+function validate_form ( )
+{
+	valid = true;
+	let regexphone = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+	let regexmail = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+	let regextext = /[a-zA-Zа-яА-я\-\_]$/
+       
+		if ( document.contact_form.login.value == "" )
+        {
+                alert ( "Пожалуйста заполните поле 'Логин'." );
+                valid = false;
+        }
+		if ( document.contact_form.password_user.value == "" )
+        {
+                alert ( "Пожалуйста заполните поле 'Пароль'." );
+                valid = false;
+        }
+		
+        return valid;
+}
+</script>
 <!-- Скрипт для поиска -->
  <script>
 			var input,search,pr,result,result_arr, locale_HTML, result_store;
