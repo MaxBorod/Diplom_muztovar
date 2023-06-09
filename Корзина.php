@@ -99,18 +99,18 @@ $user='root';
 $password='';
 $login=$_SESSION["login"];
 $link=mysqli_connect($host,$user,$password,$database)or die("ошибка".mysqli_error($link));
-$query_basket="select id_basket from klient where login='$login'";
-$result_basket = mysqli_query($link,$query_basket);
-if($result_basket)
+$query_idclient="select id from klient where login='$login'";
+$result_idclient = mysqli_query($link,$query_idclient);
+if($result_idclient)
 {
-    while($row = mysqli_fetch_assoc($result_basket))
+    while($row = mysqli_fetch_assoc($result_idclient))
     {
-       $id_basket = $row['id_basket']; 
+       $id_polz= $row['id']; 
         
     }
 }
 
-$query_order = "Select * From order_product Where id_basket='$id_basket'";
+$query_order = "Select * From order_product Where id_polz='$id_polz'";
 $result_order = mysqli_query($link,$query_order) or die("Ошибка".mysqli_error($link));
 
 
@@ -127,7 +127,7 @@ $SummPrice = 0;
 while ($a=mysqli_fetch_array($result_order))
 {   $id_order=$a['id_order'];
     $id_product=$a['id_product'];
-	$id_basket=$a['id_basket'];
+	$id_polz=$a['id_polz'];
 	$query_order_product = "Select Name,Adress_img,Price From product Where id_product='$id_product'";
 $result_order_product = mysqli_query($link,$query_order_product) or die("Ошибка".mysqli_error($link));
 if($result_order_product)
@@ -156,7 +156,7 @@ print ("</table>");
 print("<form action='Delete_order.php' method='post' ><div class='m-2 d-flex justify-content-end'>
 <div class='m-2 top_menu'>Сумма:</div>
 <input type='text' class='' value='$SummPrice руб.' disabled/>
-<button class='btn btn-outline-primary ' type='submit' value='$id_basket' name='id_basket'>Оформить заказ</button></div></form>");
+<button class='btn btn-outline-primary ' type='submit' value='$id_polz' name='id_polz'>Оформить заказ</button></div></form>");
 mysqli_close($link);
 
 ?>

@@ -207,7 +207,7 @@ $password_user=$row['password_user'];
   <div class="lich_kab_fig col-sm-auto">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <?php 
- print("<form id='form'  style='box-shadow: 0px 0px 2px black; width:600px; margin: -15px; padding: 30px;' method='post' action='Relogin.php' >
+ print("<form id='form'  name='contact_form' style='box-shadow: 0px 0px 2px black; width:600px; margin: -15px; padding: 30px;' method='post' action='Relogin.php' onsubmit='return validate_form ( );'>
   <div hidden class='form-group row'>
   <label class='col-sm-4 col-form-label'>id</label>
    <div class='col-sm' >
@@ -261,7 +261,7 @@ $password_user=$row['password_user'];
   <button class= "btn btn-danger" type="submit">Отправить</button>
 
   <button class="form-close btn btn-warning" type="button" >Скрыть</button>
-  <script>
+  <script type="text/javascript">
   $(".form-close").click(function() {
   $("#form").hide();
 });
@@ -269,7 +269,77 @@ $password_user=$row['password_user'];
 </form></div>
 
   </div>
-  
+  <!-- Скрипт для проверки правильности ввода личных данных-->
+	<script type="text/javascript">
+function validate_form ( )
+{
+	valid = true;
+	let regexphone = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+	let regexmail = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+	let regextext = /[a-zA-Zа-яА-я\-\_]$/
+       if ( document.contact_form.surname.value == "" )
+        {
+                alert ( "Пожалуйста заполните поле 'Вашу Фамилию'." );
+                valid = false;
+        }
+        if ( document.contact_form.name.value == "" )
+        {
+                alert ( "Пожалуйста заполните поле 'Ваше имя'." );
+                valid = false;
+        }
+		if ( document.contact_form.patronymic.value == "" )
+        {
+                alert ( "Пожалуйста заполните поле 'Ваше Отчество'." );
+                valid = false;
+        }
+		if ( document.contact_form.nuber_phone.value == "" )
+        {
+                alert ( "Пожалуйста заполните поле 'Номер телефона'." );
+                valid = false;
+        }
+		if ( document.contact_form.login.value == "" )
+        {
+                alert ( "Пожалуйста заполните поле 'Придумайте логин'." );
+                valid = false;
+        }
+		if ( document.contact_form.password_user.value == "" )
+        {
+                alert ( "Пожалуйста заполните поле 'Придумайте пароль'." );
+                valid = false;
+        }
+		if ( document.contact_form.rep_password_user.value == "" )
+        {
+                alert ( "Пожалуйста заполните поле 'Повторите пароль'." );
+                valid = false;
+        }
+		if ( document.contact_form.rep_password_user.value != document.contact_form.password_user.value)
+        {
+                alert ( "Пожалуйста заполните поле 'Пароли не совпадают'." );
+                valid = false;
+        }
+		if ( document.contact_form.mail_user.value == "" )
+        {
+                alert ( "Пожалуйста заполните поле 'Введите почту'." );
+                valid = false;
+        }
+		if (!regexphone.test(document.contact_form.nuber_phone.value))
+        {
+                alert ( "Пожалуйста заполните поле 'Введите телефон корректно'." );
+                valid = false;
+        }
+		if (!regexmail.test(document.contact_form.mail_user.value))
+        {
+                alert ( "Пожалуйста заполните поле 'Введите почту корректно'." );
+                valid = false;
+        }
+		if (!regextext.test(document.contact_form.surname.value)||!regextext.test(document.contact_form.name.value)||!regextext.test(document.contact_form.patronymic.value))
+        {
+                alert ( "Пожалуйста заполните поле 'Введите только буквы в поля'." );
+                valid = false;
+        }
+        return valid;
+}
+</script>
 <!-- Скрипт для поиска -->
  <script>
 			var input,search,pr,result,result_arr, locale_HTML, result_store;

@@ -14,17 +14,17 @@ elseif(isset($_POST['button2'])) { if(isset($_SESSION['login'])){
   $login = $_SESSION['login']; 
   $id_product =$_POST['id_product'];
  
-$query="Select id_basket From klient Where login='$login'";
+$query="Select id From klient Where login='$login'";
 $result=mysqli_query($link, $query);
 if($result)
 {
     while($row = mysqli_fetch_assoc($result))
     {
-       $id_basket = $row['id_basket']; 
+       $id_polz = $row['id']; 
        
     }
 }
-$query_order="Insert Into order_product (id_basket,id_product) VALUES ('$id_basket','$id_product')";
+$query_order="Insert Into order_product (id_polz,id_product) VALUES ('$id_polz','$id_product')";
 $result_order=mysqli_query($link, $query_order);
 if($result_order)
 {

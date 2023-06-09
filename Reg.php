@@ -20,21 +20,7 @@ if(!empty($_POST['surname']) && !empty($_POST['name']) && !empty($_POST['patrony
 $query="INSERT INTO klient (surname,name,patronymic,nuber_phone,mail_user,login,password_user,id_role) VALUES 
 ('$surname', '$name', '$patronymic', '$nuber_phone', '$mail_user', '$login', '$password_user','$id_role')";
 $result=mysqli_query($link, $query);
-$query_basket="Select id From klient Where login='$login'";
-$result_basket = mysqli_query($link,$query_basket);
-if($result_basket)
-{
-    while($row = mysqli_fetch_assoc($result_basket))
-    {
-       $id_basket = $row['id']; 
-        
-    }
-}
- 
-$query_create_basket = "INSERT INTO Basket (id_basket) VALUES ('$id_basket')";
-$result_cr_bas = mysqli_query($link, $query_create_basket);
-$query_bas_kl="UPDATE klient Set id_basket='$id_basket'  Where id='$id_basket'";
-$result_bas_kl=mysqli_query($link,$query_bas_kl);
+
 if ($result){
 	$_SESSION['login']=$login;
 header("Location: Личный_кабинет.php");
